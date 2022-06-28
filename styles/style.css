@@ -15,4 +15,84 @@ body{
     background-color: #D8D9D9;
 }
 
+/* principal container */
+.waves{
+    margin: 10rem auto;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
 
+/* childs containers animations and styles */
+.waves > div{
+    background-color: red;
+    height: 100%;
+    width: 0.6rem;
+    display: inline-block;
+    /* Google Chrome multimedia propertie | extension */
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+/* 2 bar container animation */
+.waves .rect2{
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+/* 3 bar container animation */
+.waves .rect3{
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+/* 4 bar container animation */
+.waves .rect4{
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+/* 5 bar container animation */
+.waves .rect5{
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+/* efects´s step */
+/* keyframes */
+@-webkit-keyframes sk-stretchdelay{
+    /* starting point, intermediate point, maximum value */
+    0%, 40%, 100%{
+        /* internally applies to certain efects */
+        /* transformation efect */
+        -webkit-transform: scaleY(0.4);
+    }
+    20%{
+        -webkit-transform: scaleY(1.4);
+    }
+}
+
+/* adapt the animation to different screen sizes */
+@keyframes sk-stretchdelay{
+    0%, 40%, 100%{
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20%{
+        transform: scaleY(1.4);
+        -webkit-transform: scaleY(1.4);
+    }
+}
+
+/* "loading" text */
+p{
+    font-family: 'Open sans', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -7rem;
+}
